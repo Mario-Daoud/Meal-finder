@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MEAL APP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty">login empty</string>
+    <string name="emptyUsername">username is empty</string>
+    <string name="emptyPassword">password is empty</string>
+    <string name="user_doesnt_exist">user does not exist</string>
+    <string name="loginsucces">login succesful</string>
+    <string name="login_password">Password</string>
+    <string name="login_enterPassword">Enter your password</string>
+    <string name="login_login">Login</string>
+    <string name="login_enterUsername">Enter your username</string>
+    <string name="login_username">Username</string>
+   µ
+
+
+</resources>

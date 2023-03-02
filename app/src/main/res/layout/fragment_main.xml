@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mealapp.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <!-- username text view -->
+        <TextView
+            android:id="@+id/textView_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_username"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_dark_background"
+            android:padding="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/etLogin" />
+
+        <!-- username edit text -->
+        <EditText
+            android:id="@+id/etLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_enterUsername"
+            android:text="@={viewModel.username}"
+            android:padding="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_username" />
+
+        <!-- password text view -->
+        <TextView
+            android:id="@+id/textView_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_password"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_dark_background"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etLogin"
+            app:layout_constraintBottom_toTopOf="@id/etPassword" />
+
+        <!-- password edit text -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/login_enterPassword"
+            android:text="@={viewModel.password}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_password" />
+
+        <!-- login button -->
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login_login"
+            android:layout_margin="16dp"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:onClick="@{() -> viewModel.btnLoginClicked()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

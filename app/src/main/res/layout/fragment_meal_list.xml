@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mealapp.list.MealListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".list.MealListFragment">
+
+        <!-- first letter edit text -->
+        <EditText
+            android:id="@+id/etFirstletter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@={viewModel.enteredLetter}"
+            android:layout_margin="12dp"
+            android:hint="Please enter first letter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- button search -->
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etFirstletter"
+            android:text="search"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:onClick="@{() -> viewModel.onSearchButtonClicked()}"
+            android:layout_margin="12dp" />
+
+        <!-- recyclerview meals -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/searchBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="8dp"
+            android:id="@+id/rv_meals"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
