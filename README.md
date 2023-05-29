@@ -4,9 +4,7 @@
 <img src="https://user-images.githubusercontent.com/113902874/232512912-bf933419-b1eb-4f3f-824f-241098d42072.png" alt="Kotlin_Icon" height="80px"/>
 
 ## Assignment
-You create an app where you can look up recipes. We use the API:
-
-"https://www.themealdb.com/api/json/v1/1/search.php?f=\(startletter)"
+You create an app where you can look up recipes. We use the API: https://www.themealdb.com/api/json/v1/1/search.php?f=\(startletter)
 
 We start with a login screen.
 Since we don't use a DB, you have to create an array of users at the start that you can use to check if you are logged in correctly.
