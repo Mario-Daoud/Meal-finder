@@ -1,7 +1,5 @@
 # Meal App
 <h4>Re-exam Android Development 2022-2023</h4>
-<br/>
-<img src="https://user-images.githubusercontent.com/113902874/232512912-bf933419-b1eb-4f3f-824f-241098d42072.png" alt="Kotlin_Icon" height="80px"/>
 
 ## Assignment
 You create an app where you can look up recipes. We use the API: https://www.themealdb.com/api/json/v1/1/search.php?f=\(startletter)
