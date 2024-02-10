@@ -1,5 +1,4 @@
 # Meal App
-<h4>Re-exam Android Development 2022-2023</h4>
 
 ## Assignment
 You create an app where you can look up recipes. We use the API: https://www.themealdb.com/api/json/v1/1/search.php?f=\(startletter)
